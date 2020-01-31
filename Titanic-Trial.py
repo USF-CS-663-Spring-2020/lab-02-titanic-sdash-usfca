@@ -1,23 +1,23 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[60]:
+# In[3]:
 
 
 import pandas as pd
 import numpy as np
 
-titanic = pd.read_csv('train.csv')
+titanic = pd.read_csv('titanic.csv')
 titanic.head()
 
 
-# In[3]:
+# In[4]:
 
 
 titanic.info()
 
 
-# In[9]:
+# In[5]:
 
 
 #highest Fare
@@ -35,7 +35,7 @@ titanic[['Survived','Fare']]
 titanic['Survived'].value_counts()
 
 
-# In[29]:
+# In[9]:
 
 
 import matplotlib.pyplot as plt
@@ -48,20 +48,20 @@ plt.ylabel('Fare')
 plt.title('Survival with respect to Fare')
 
 
-# In[52]:
+# In[6]:
 
 
 import seaborn as sns
 sns.barplot(x='Survived',y='Fare',data=titanic)
 
 
-# In[109]:
+# In[10]:
 
 
 plt.scatter(x='Fare',y='Survived',data=titanic,marker='d',color='blue')
 
 
-# In[98]:
+# In[11]:
 
 
 fig = plt.figure()
@@ -76,7 +76,7 @@ plt.title('Survivals with respect to Fare')
 plt.show()
 
 
-# In[85]:
+# In[12]:
 
 
 sns.boxplot(x='Survived',y='Fare',data=titanic)
